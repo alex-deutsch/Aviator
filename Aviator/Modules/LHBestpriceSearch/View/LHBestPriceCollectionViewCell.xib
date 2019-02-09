@@ -13,14 +13,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LHBestPriceCollectionViewCell" customModule="Aviator" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="508" height="119"/>
+            <rect key="frame" x="0.0" y="0.0" width="346" height="129"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="508" height="119"/>
+                <rect key="frame" x="0.0" y="0.0" width="346" height="129"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHm-KZ-ezq">
-                        <rect key="frame" x="8" y="8" width="492" height="20"/>
+                        <rect key="frame" x="8" y="8" width="330" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="HZS-tP-vRH"/>
                         </constraints>
@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfz-rU-lrN">
-                        <rect key="frame" x="8" y="40" width="492" height="15"/>
+                        <rect key="frame" x="8" y="40" width="330" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="Nwo-ac-6Cj"/>
                         </constraints>
@@ -38,7 +38,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFf-Hu-UlG">
-                        <rect key="frame" x="8" y="91" width="492" height="20"/>
+                        <rect key="frame" x="8" y="101" width="330" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="KQJ-ZO-95j"/>
                         </constraints>
@@ -61,13 +61,13 @@
                 <constraint firstItem="NHm-KZ-ezq" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="8" id="zDX-I9-PJS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="508" height="119"/>
+            <size key="customSize" width="346" height="129"/>
             <connections>
                 <outlet property="bottomRightLabel" destination="nFf-Hu-UlG" id="Un9-jY-KaI"/>
                 <outlet property="centerLabelTop" destination="zfz-rU-lrN" id="cN5-Ho-bwp"/>
                 <outlet property="titleLabel" destination="NHm-KZ-ezq" id="Mhb-tY-unb"/>
             </connections>
-            <point key="canvasLocation" x="-296" y="-87.706146926536732"/>
+            <point key="canvasLocation" x="-425.60000000000002" y="-83.208395802098963"/>
         </collectionViewCell>
     </objects>
 </document>

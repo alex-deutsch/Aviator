@@ -9,11 +9,11 @@
 import UIKit
 import WebKit
 
-protocol WebViewProtocol {
-    func load(url: URL)
+public protocol WebViewProtocol {
+    func configure(with url: URL)
 }
 
-class WebViewController: UIViewController {
+public class WebViewController: UIViewController {
     var request: URLRequest? = nil
 
     @IBOutlet private weak var webView: WKWebView! {
@@ -22,23 +22,22 @@ class WebViewController: UIViewController {
         }
     }
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-}
-
-extension WebViewController: WebViewProtocol {
-    func load(url: URL) {
-        let request = URLRequest(url: url)
-        guard webView != nil else { return }
+        guard let request = request else { return }
         webView.load(request)
     }
 }
 
+extension WebViewController: WebViewProtocol {
+    public func configure(with url: URL) {
+        self.request = URLRequest(url: url)
+    }
+}
+
 extension WebViewController: WKNavigationDelegate {
-    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+    
+    internal func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         decisionHandler(.allow)
     }
 }

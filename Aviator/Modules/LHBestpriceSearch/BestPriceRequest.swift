@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import F1reKit
 
 struct BestPriceRequest: RequestProtocol {
     private static let baseURLString: String = "https://bestprice-live-backend.mcon.net"

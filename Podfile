@@ -9,5 +9,25 @@ target 'Aviator' do
   pod 'RxAlamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'SnapKit'
+end
 
+target 'LHBestpriceSearch' do
+    use_frameworks!
+
+    # Pods for Aviator
+    pod 'RxAlamofire'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'SnapKit'
+end
+
+target 'F1reKit' do
+    use_frameworks!
+
+    # Pods for Aviator
+    pod 'RxAlamofire'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'SnapKit'
 end

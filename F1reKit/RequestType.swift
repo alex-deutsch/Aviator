@@ -26,6 +26,6 @@ public func json(request: RequestProtocol) -> Observable<Any> {
                 headers: request.headers)
 }
 
-enum RequestError: Error {
+public enum RequestError: Error {
     case mappingFailed
 }

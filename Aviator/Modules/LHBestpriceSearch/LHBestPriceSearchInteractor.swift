@@ -9,6 +9,7 @@
 import RxAlamofire
 import RxSwift
 import Alamofire
+import F1reKit
 
 protocol LHBestPriceSearchInteractorProtocol {
     func getFlights(from airportCodeFrom: String, to airportCodeTo: String, startDate: Date, durationInDays: Int) -> Single<[LHBestPriceResult]>
