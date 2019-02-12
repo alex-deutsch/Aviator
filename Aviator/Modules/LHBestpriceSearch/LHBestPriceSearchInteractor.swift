@@ -10,12 +10,24 @@ import RxAlamofire
 import RxSwift
 import Alamofire
 import F1reKit
+import AirportKit
 
 protocol LHBestPriceSearchInteractorProtocol {
+    var airports: [Airport] { get }
     func getFlights(from airportCodeFrom: String, to airportCodeTo: String, startDate: Date, durationInDays: Int) -> Single<[LHBestPriceResult]>
 }
 
 class LHBestPriceSearchInteractor {
+    private let airportInteractor: AirportInteractorProtocol
+
+    init(airportInteractor: AirportInteractorProtocol) {
+        self.airportInteractor = airportInteractor
+    }
+
+    var airports: [Airport] {
+        return airportInteractor.all
+    }
+
 
     private let disposeBag = DisposeBag()
 }

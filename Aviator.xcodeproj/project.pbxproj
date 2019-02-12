@@ -26,11 +26,19 @@
 		112A5224220EF524000F2005 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BDC27D21A083E300AB8006 /* ReusableCell.swift */; };
 		112A5225220EF524000F2005 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BDC27621A0721C00AB8006 /* RequestType.swift */; };
 		112A5226220EF524000F2005 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BDC27F21A08D6400AB8006 /* WebViewController.swift */; };
-		112A5227220EF52A000F2005 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BDC28021A08D6400AB8006 /* WebViewController.xib */; };
 		112A522E220EF73D000F2005 /* LHBestPriceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A522C220EF720000F2005 /* LHBestPriceFactory.swift */; };
 		112A5230220EFD1F000F2005 /* MultipleItemSelectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A522F220EFD1F000F2005 /* MultipleItemSelectionFactory.swift */; };
 		112A5231220EFD72000F2005 /* MultipleItemSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A51D5220ED94B000F2005 /* MultipleItemSelectionViewController.swift */; };
 		112A5232220EFD75000F2005 /* MultipleItemSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A51D7220ED986000F2005 /* MultipleItemSelectionPresenter.swift */; };
+		112A524E220F5EF4000F2005 /* AirportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112A5245220F5EF4000F2005 /* AirportKit.framework */; };
+		112A5255220F5EF4000F2005 /* AirportKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A5254220F5EF4000F2005 /* AirportKitTests.swift */; };
+		112A5257220F5EF4000F2005 /* AirportKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 112A5247220F5EF4000F2005 /* AirportKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		112A525A220F5EF4000F2005 /* AirportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112A5245220F5EF4000F2005 /* AirportKit.framework */; };
+		112A525B220F5EF4000F2005 /* AirportKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 112A5245220F5EF4000F2005 /* AirportKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		112A5262220F5EFF000F2005 /* AirportInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A523B220F33B9000F2005 /* AirportInteractor.swift */; };
+		112A5263220F5F0D000F2005 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A5239220F3309000F2005 /* Airport.swift */; };
+		112A5266220F6249000F2005 /* F1reKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112A5207220EF517000F2005 /* F1reKit.framework */; };
+		112A5267220F6284000F2005 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 112A5236220F321E000F2005 /* airports.json */; };
 		1181AF4721A0221F0054A0DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181AF4621A0221F0054A0DF /* AppDelegate.swift */; };
 		1181AF4B21A0221F0054A0DF /* PriorityPassLoungeFinderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1181AF4A21A0221F0054A0DF /* PriorityPassLoungeFinderVC.swift */; };
 		1181AF5021A022210054A0DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1181AF4F21A022210054A0DF /* Assets.xcassets */; };
@@ -69,6 +77,27 @@
 			remoteGlobalIDString = 112A5206220EF517000F2005;
 			remoteInfo = F1reKit;
 		};
+		112A524F220F5EF4000F2005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1181AF3B21A0221F0054A0DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 112A5244220F5EF4000F2005;
+			remoteInfo = AirportKit;
+		};
+		112A5251220F5EF4000F2005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1181AF3B21A0221F0054A0DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1181AF4221A0221F0054A0DF;
+			remoteInfo = Aviator;
+		};
+		112A5258220F5EF4000F2005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1181AF3B21A0221F0054A0DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 112A5244220F5EF4000F2005;
+			remoteInfo = AirportKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,6 +109,7 @@
 			files = (
 				112A51F0220EF3BF000F2005 /* LHBestpriceSearch.framework in Embed Frameworks */,
 				112A521D220EF517000F2005 /* F1reKit.framework in Embed Frameworks */,
+				112A525B220F5EF4000F2005 /* AirportKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +133,15 @@
 		112A5218220EF517000F2005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		112A522C220EF720000F2005 /* LHBestPriceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHBestPriceFactory.swift; sourceTree = "<group>"; };
 		112A522F220EFD1F000F2005 /* MultipleItemSelectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleItemSelectionFactory.swift; sourceTree = "<group>"; };
+		112A5236220F321E000F2005 /* airports.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
+		112A5239220F3309000F2005 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		112A523B220F33B9000F2005 /* AirportInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportInteractor.swift; sourceTree = "<group>"; };
+		112A5245220F5EF4000F2005 /* AirportKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AirportKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		112A5247220F5EF4000F2005 /* AirportKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirportKit.h; sourceTree = "<group>"; };
+		112A5248220F5EF4000F2005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		112A524D220F5EF4000F2005 /* AirportKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirportKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		112A5254220F5EF4000F2005 /* AirportKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportKitTests.swift; sourceTree = "<group>"; };
+		112A5256220F5EF4000F2005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1181AF4321A0221F0054A0DF /* Aviator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1181AF4621A0221F0054A0DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1181AF4821A0221F0054A0DF /* LHBestpriceSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHBestpriceSearchVC.swift; sourceTree = "<group>"; };
@@ -120,7 +159,6 @@
 		11BDC27A21A0732600AB8006 /* LHBestPriceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LHBestPriceCollectionViewCell.xib; sourceTree = "<group>"; };
 		11BDC27D21A083E300AB8006 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		11BDC27F21A08D6400AB8006 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		11BDC28021A08D6400AB8006 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		4F34888AF084D878C69D18B1 /* Pods-Aviator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aviator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aviator/Pods-Aviator.release.xcconfig"; sourceTree = "<group>"; };
 		8C9F9EDF8596E149A529AA06 /* Pods_F1reKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_F1reKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46BBA21477737884E52E53A /* Pods_LHBestpriceSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LHBestpriceSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112A5266220F6249000F2005 /* F1reKit.framework in Frameworks */,
 				14039B04B3FE1FE1ED008EEB /* Pods_LHBestpriceSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,11 +195,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		112A5242220F5EF4000F2005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		112A524A220F5EF4000F2005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				112A524E220F5EF4000F2005 /* AirportKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1181AF4021A0221F0054A0DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				655B1CC9C3F2ECB8FB284117 /* Pods_Aviator.framework in Frameworks */,
+				112A525A220F5EF4000F2005 /* AirportKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +233,7 @@
 		112A51D9220EEA26000F2005 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				112A5246220F5EF4000F2005 /* AirportKit */,
 				112A51E9220EF3BF000F2005 /* LHBestpriceSearch */,
 				111B898F21B09D7700EA3410 /* PriorityPass */,
 			);
@@ -227,9 +283,45 @@
 			children = (
 				11BDC28321A1D30A00AB8006 /* ListSelection */,
 				11BDC27F21A08D6400AB8006 /* WebViewController.swift */,
-				11BDC28021A08D6400AB8006 /* WebViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		112A5235220F3210000F2005 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				112A5236220F321E000F2005 /* airports.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		112A5238220F32F9000F2005 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				112A5239220F3309000F2005 /* Airport.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		112A5246220F5EF4000F2005 /* AirportKit */ = {
+			isa = PBXGroup;
+			children = (
+				112A5238220F32F9000F2005 /* Model */,
+				112A5235220F3210000F2005 /* Data */,
+				112A523B220F33B9000F2005 /* AirportInteractor.swift */,
+				112A5247220F5EF4000F2005 /* AirportKit.h */,
+				112A5248220F5EF4000F2005 /* Info.plist */,
+			);
+			path = AirportKit;
+			sourceTree = "<group>";
+		};
+		112A5253220F5EF4000F2005 /* AirportKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				112A5254220F5EF4000F2005 /* AirportKitTests.swift */,
+				112A5256220F5EF4000F2005 /* Info.plist */,
+			);
+			path = AirportKitTests;
 			sourceTree = "<group>";
 		};
 		1181AF3A21A0221F0054A0DF = {
@@ -238,6 +330,7 @@
 				1181AF4521A0221F0054A0DF /* Aviator */,
 				112A5208220EF517000F2005 /* F1reKit */,
 				112A5215220EF517000F2005 /* F1reKitTests */,
+				112A5253220F5EF4000F2005 /* AirportKitTests */,
 				1181AF4421A0221F0054A0DF /* Products */,
 				BF4C5A6FDF0594AD9B67C5AA /* Pods */,
 				48488E09A15B49EC4797EA92 /* Frameworks */,
@@ -251,6 +344,8 @@
 				112A51E8220EF3BF000F2005 /* LHBestpriceSearch.framework */,
 				112A5207220EF517000F2005 /* F1reKit.framework */,
 				112A520F220EF517000F2005 /* F1reKitTests.xctest */,
+				112A5245220F5EF4000F2005 /* AirportKit.framework */,
+				112A524D220F5EF4000F2005 /* AirportKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -338,6 +433,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		112A5240220F5EF4000F2005 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				112A5257220F5EF4000F2005 /* AirportKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +501,43 @@
 			productReference = 112A520F220EF517000F2005 /* F1reKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		112A5244220F5EF4000F2005 /* AirportKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 112A525C220F5EF4000F2005 /* Build configuration list for PBXNativeTarget "AirportKit" */;
+			buildPhases = (
+				112A5240220F5EF4000F2005 /* Headers */,
+				112A5241220F5EF4000F2005 /* Sources */,
+				112A5242220F5EF4000F2005 /* Frameworks */,
+				112A5243220F5EF4000F2005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirportKit;
+			productName = AirportKit;
+			productReference = 112A5245220F5EF4000F2005 /* AirportKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		112A524C220F5EF4000F2005 /* AirportKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 112A525F220F5EF4000F2005 /* Build configuration list for PBXNativeTarget "AirportKitTests" */;
+			buildPhases = (
+				112A5249220F5EF4000F2005 /* Sources */,
+				112A524A220F5EF4000F2005 /* Frameworks */,
+				112A524B220F5EF4000F2005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				112A5250220F5EF4000F2005 /* PBXTargetDependency */,
+				112A5252220F5EF4000F2005 /* PBXTargetDependency */,
+			);
+			name = AirportKitTests;
+			productName = AirportKitTests;
+			productReference = 112A524D220F5EF4000F2005 /* AirportKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1181AF4221A0221F0054A0DF /* Aviator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1181AF5721A022210054A0DF /* Build configuration list for PBXNativeTarget "Aviator" */;
@@ -414,6 +554,7 @@
 			dependencies = (
 				112A51EE220EF3BF000F2005 /* PBXTargetDependency */,
 				112A521B220EF517000F2005 /* PBXTargetDependency */,
+				112A5259220F5EF4000F2005 /* PBXTargetDependency */,
 			);
 			name = Aviator;
 			productName = Aviator;
@@ -440,6 +581,13 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 1181AF4221A0221F0054A0DF;
 					};
+					112A5244220F5EF4000F2005 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					112A524C220F5EF4000F2005 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1181AF4221A0221F0054A0DF;
+					};
 					1181AF4221A0221F0054A0DF = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -462,6 +610,8 @@
 				112A51E7220EF3BF000F2005 /* LHBestpriceSearch */,
 				112A5206220EF517000F2005 /* F1reKit */,
 				112A520E220EF517000F2005 /* F1reKitTests */,
+				112A5244220F5EF4000F2005 /* AirportKit */,
+				112A524C220F5EF4000F2005 /* AirportKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -480,11 +630,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				112A5227220EF52A000F2005 /* WebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		112A520D220EF517000F2005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		112A5243220F5EF4000F2005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				112A5267220F6284000F2005 /* airports.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		112A524B220F5EF4000F2005 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -638,6 +802,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		112A5241220F5EF4000F2005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				112A5262220F5EFF000F2005 /* AirportInteractor.swift in Sources */,
+				112A5263220F5F0D000F2005 /* Airport.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		112A5249220F5EF4000F2005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				112A5255220F5EF4000F2005 /* AirportKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1181AF3F21A0221F0054A0DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -670,6 +851,21 @@
 			isa = PBXTargetDependency;
 			target = 112A5206220EF517000F2005 /* F1reKit */;
 			targetProxy = 112A521A220EF517000F2005 /* PBXContainerItemProxy */;
+		};
+		112A5250220F5EF4000F2005 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 112A5244220F5EF4000F2005 /* AirportKit */;
+			targetProxy = 112A524F220F5EF4000F2005 /* PBXContainerItemProxy */;
+		};
+		112A5252220F5EF4000F2005 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1181AF4221A0221F0054A0DF /* Aviator */;
+			targetProxy = 112A5251220F5EF4000F2005 /* PBXContainerItemProxy */;
+		};
+		112A5259220F5EF4000F2005 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 112A5244220F5EF4000F2005 /* AirportKit */;
+			targetProxy = 112A5258220F5EF4000F2005 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -836,6 +1032,102 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.f1re.ios.f1rekit.F1reKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aviator.app/Aviator";
+			};
+			name = Release;
+		};
+		112A525D220F5EF4000F2005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 97NL7NZ9K6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Aviator/Modules/AirportKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.f1re.ios.airportkit.AirportKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		112A525E220F5EF4000F2005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 97NL7NZ9K6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Aviator/Modules/AirportKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.f1re.ios.airportkit.AirportKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		112A5260220F5EF4000F2005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54NM6KHG5G;
+				INFOPLIST_FILE = AirportKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.f1re.ios.airportkit.AirportKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aviator.app/Aviator";
+			};
+			name = Debug;
+		};
+		112A5261220F5EF4000F2005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54NM6KHG5G;
+				INFOPLIST_FILE = AirportKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.f1re.ios.airportkit.AirportKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1025,6 +1317,24 @@
 			buildConfigurations = (
 				112A5220220EF517000F2005 /* Debug */,
 				112A5221220EF517000F2005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		112A525C220F5EF4000F2005 /* Build configuration list for PBXNativeTarget "AirportKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				112A525D220F5EF4000F2005 /* Debug */,
+				112A525E220F5EF4000F2005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		112A525F220F5EF4000F2005 /* Build configuration list for PBXNativeTarget "AirportKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				112A5260220F5EF4000F2005 /* Debug */,
+				112A5261220F5EF4000F2005 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

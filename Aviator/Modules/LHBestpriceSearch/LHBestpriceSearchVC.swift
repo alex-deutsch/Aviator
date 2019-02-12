@@ -10,6 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import F1reKit
+import AirportKit
 
 public class LHBestpriceSearchVC: UIViewController {
 
@@ -18,12 +19,12 @@ public class LHBestpriceSearchVC: UIViewController {
     private let presenter: LHBestPriceSearchPresenterProtocol
 
     // TODO
-    private var origins: [String] = [] {
+    private var origins: [Airport] = [] {
         didSet {
             presenter.getBestPrices(from: self.origins, to: self.destinations)
         }
     }
-    private var destinations: [String] = [] {
+    private var destinations: [Airport] = [] {
         didSet {
             presenter.getBestPrices(from: self.origins, to: self.destinations)
         }
@@ -53,16 +54,15 @@ public class LHBestpriceSearchVC: UIViewController {
         collectionView.rx.modelSelected(LHBestPriceResultViewModel.self).subscribe() { event in
             guard let urlString = event.element?.linkURLString,
                 let url = URL(string: urlString) else { return }
-            let webviewController = WebViewController(nibName: "WebViewController", bundle: nil)
-            self.navigationController?.pushViewController(webviewController, animated: true)
-            webviewController.configure(with: url)
+            let webviewController = WebViewController(url: url)
+            self.present(webviewController, animated: true, completion: nil)
         }.disposed(by: disposeBag)
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Departures Airports", style: .plain, target: self, action: #selector(selectOrigins))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Destination Airports", style: .plain, target: self, action: #selector(selectDestinations))
     }
 
     @objc private func selectOrigins() {
-        let selectionViewController = MultipleSelectionFactory.create(items: ["SFO","SIN"], selectedItems: self.origins) { selectedItems in
+        let selectionViewController = MultipleSelectionFactory.create(items: presenter.departureAirports, selectedItems: self.origins) { selectedItems in
             self.origins = selectedItems
         }
         let navigationController = UINavigationController(rootViewController: selectionViewController)
@@ -70,7 +70,7 @@ public class LHBestpriceSearchVC: UIViewController {
     }
 
     @objc private func selectDestinations() {
-        let selectionViewController = MultipleSelectionFactory.create(items: ["MIL","MUC"], selectedItems: self.destinations) { selectedItems in
+        let selectionViewController = MultipleSelectionFactory.create(items: presenter.destinationAirports, selectedItems: self.destinations) { selectedItems in
             self.destinations = selectedItems
         }
         let navigationController = UINavigationController(rootViewController: selectionViewController)
@@ -85,10 +85,15 @@ public class LHBestpriceSearchVC: UIViewController {
         let leftRightContentInset: CGFloat = 16.0
         let itemSpacing: CGFloat = 10.0
         collectionView.contentInset = UIEdgeInsets(top: leftRightContentInset, left: 20, bottom: 20, right: leftRightContentInset)
-        collectionView.backgroundColor = UIColor.blue.withAlphaComponent(0.5)
         guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
         flowLayout.minimumInteritemSpacing = itemSpacing
-        flowLayout.itemSize = CGSize(width: collectionView.contentSize.width - leftRightContentInset * 2, height: 85)
+        flowLayout.itemSize = CGSize(width: collectionView.contentSize.width - leftRightContentInset * 2, height: 75)
     }
 
+}
+
+extension Airport: MultiSelectableItem {
+    public var title: String {
+        return name
+    }
 }

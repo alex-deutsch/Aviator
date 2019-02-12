@@ -7,13 +7,15 @@
 //
 
 import Foundation
+import AirportKit
 
 public class LHBestPriceFactory {
 
     public init() {}
 
     public func create() -> LHBestpriceSearchVC {
-        let presenter = LHBestPriceSearchPresenter(interactor: LHBestPriceSearchInteractor())
+        let airportInteractor = AirportInteractor()
+        let presenter = LHBestPriceSearchPresenter(interactor: LHBestPriceSearchInteractor(airportInteractor: airportInteractor))
         let viewController = LHBestpriceSearchVC(presenter: presenter)
         return viewController
     }

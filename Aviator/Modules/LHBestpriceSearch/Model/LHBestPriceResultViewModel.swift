@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AirportKit
 
 struct LHBestPriceResultViewModel {
     let fromTo: String
@@ -15,10 +16,10 @@ struct LHBestPriceResultViewModel {
     let dateString: String
     let linkURLString: String
 
-    init(model: LHBestPriceResult, from: String, to: String) {
-        self.fromTo = "\(from) ✈ \(to)"
+    init(model: LHBestPriceResult, from: Airport, to: Airport) {
+        self.fromTo = "\(from.code) ✈ \(to.code)"
         self.price = "\(model.price)"
-        self.dateString = "📅 \(model.departureDate) - \(model.returnDate)"
+        self.dateString = "📅 \(model.departureDate)"
         self.linkURLString = model.deepLinkM
         self.currency = model.currency
     }

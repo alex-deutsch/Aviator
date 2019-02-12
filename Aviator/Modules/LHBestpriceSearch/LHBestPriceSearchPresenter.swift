@@ -8,9 +8,12 @@
 
 import Foundation
 import RxSwift
+import AirportKit
 
 protocol LHBestPriceSearchPresenterProtocol {
-    func getBestPrices(from fromAirports: [String], to toAirports: [String])
+    func getBestPrices(from fromAirports: [Airport], to toAirports: [Airport])
+    var departureAirports: [Airport] { get }
+    var destinationAirports: [Airport] { get }
     var viewModelsObserver: Observable<[LHBestPriceResultViewModel]> { get }
 }
 
@@ -26,11 +29,13 @@ class LHBestPriceSearchPresenter {
 }
 
 extension LHBestPriceSearchPresenter: LHBestPriceSearchPresenterProtocol {
-    func getBestPrices(from fromAirports: [String], to toAirports: [String]) {
+    func getBestPrices(from fromAirports: [Airport], to toAirports: [Airport]) {
+        self.viewModels.value.removeAll()
+        
         let today = Date()
         fromAirports.forEach { from in
             toAirports.forEach({ to in
-                interactor.getFlights(from: from, to: to, startDate: today, durationInDays: 7).subscribe{ event in
+                interactor.getFlights(from: from.code, to: to.code, startDate: today, durationInDays: 7).subscribe{ event in
                     switch event {
                     case .success(let model):
                         var models = self.viewModels.value
@@ -51,5 +56,13 @@ extension LHBestPriceSearchPresenter: LHBestPriceSearchPresenterProtocol {
 
     var viewModelsObserver: Observable<[LHBestPriceResultViewModel]> {
         return viewModels.asObservable()
+    }
+
+    var departureAirports: [Airport] {
+        return interactor.airports.filter({ $0.tz == "Europe" && $0.isMajor })
+    }
+
+    var destinationAirports: [Airport] {
+        return interactor.airports.filter({ $0.tz == "Asia" && $0.isMajor })
     }
 }
